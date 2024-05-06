@@ -1,0 +1,155 @@
+@import url( 'https://fonts.goolgleapis.com/css?family=Poppins:400,500,700');
+    
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Space Grotesk", sans-serif;
+ font-weight: 100;
+    color:black;
+}
+
+body{
+    background: linear-gradient(200deg, aqua, rgb(45, 131, 243));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 425px;
+    height: 468px;
+    background-color: white;
+    box-shadow: 5px 7px 20px;
+    color: black;
+    border-radius: 30px;
+}
+
+.wrapper p {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 354px;
+    height: 58px;
+    margin: 30px 0;
+    margin-top: 40px;
+    margin-left: 36px;   
+    border-bottom: 2px solid black;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: black;
+    font-size: 25px;
+    padding-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+.input-box input:active{
+    border: none;
+}
+
+.wrapper i {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.input-box input::placeholder{
+    color: black;
+}
+
+.wrapper .btn {
+    width: 270px;
+    height: 52px;
+    border-radius: 20px;
+    color: black;
+    font-size: 25px;
+    margin-left: 72px;
+    margin-right: 70px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;    
+    background-color: aqua;
+    transition:  0.3s ease-in-out;
+}
+
+.btn:hover{
+    background: bisque;
+    color:black;
+    transition:  0.4s ease-in-out;
+}
+
+.wrapper a{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: black;
+}
+
+@media (max-width: 424px){
+    .wrapper{
+        width: 300px;
+    }
+    .wrapper .input-box{
+        width: 230px;
+    }
+    .input-box input{
+        font-size: 20px;
+    }
+    .wrapper .input{
+        width: 100%;
+    }
+    .wrapper .btn{
+        width: 150px;
+    }
+    .wrapper i{
+        right: 10px;
+    }
+}
+
+@media  (max-height: 471px) {
+    .wrapper{
+        width: 280px;
+        height: 350px;
+    }
+    .wrapper p{
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    .wrapper .input-box{
+        width: 200px;
+        margin-top: 20px;
+    }
+    .input-box  input::placeholder{
+        font-size: 18px;
+    }
+    .input-box .input{
+        font-size: 10px;
+    }
+    .wrapper .btn{
+        width: 150px;
+        font-size: 18px;
+        height: 40px;
+        margin-left: 68px;
+        margin-top: 5px;
+    }
+    .wrapper i{
+        right: 8px;
+        font-size: 20px;
+    }
+}
+ 

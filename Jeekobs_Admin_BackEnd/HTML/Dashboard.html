@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Dashboard.css">
+    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidebar">
+       <div class="box">
+         <div class="profile">
+            <p>Admin</p>
+            <img src="/JeekobsSportCenter_ADMIN/Users/Admin.jpg" alt="">
+         </div>
+       </div>
+
+     <div class="navbar">
+        <ul>
+          <div class="Dashboard">
+          <li>
+            <a>Dashboard</a>
+            <i class='bx bxs-dashboard'></i>
+         </li>
+        </div>
+        <li>
+          <a href="/JeekobsSportCenter_ADMIN/HTML/Products.html">Products</a>
+          <i class='bx bx-package'></i>
+        </li>
+        <li>
+          <a href="/JeekobsSportCenter_ADMIN/HTML/Orders.html">Orders</a>
+          <i class='bx bx-clipboard'></i>
+       </li>
+        <li>
+            <a href="/JeekobsSportCenter_ADMIN/HTML/Reviews.html">Reviews</a>
+            <i class='bx bxs-message-alt-detail'></i>
+         </li>
+        <li>
+            <a href="/JeekobsSportCenter_ADMIN/HTML/Users.html">Users</a>
+            <i class='bx bxs-user-badge'></i>
+         </li>
+          <!--DORPDOWN-->
+         <ul class="settings-dropdown">
+          <li>
+            <a>Settings</a>
+            <i class='bx bxs-cog' ></i>
+            <div class="arrow"><i class='bx bxs-down-arrow'></i></i></i></div>
+         </li>
+         <div class="product-management">
+      </div>
+         <li>
+        <div class="Logout">
+          <button id="show-logout">Logout</button>
+           <i class='bx bxs-log-out' ></i>
+      </div>    
+         </li>
+        </ul>
+         <!--DORPDOWN-->
+        </ul>
+
+         <!--LOGOUT PAGE-->
+      <div class="Logout">
+        <button id="show-logout">Logout</button>
+         <i class='bx bxs-log-out' ></i>
+    </div>
+        <!--LOGOUT PAGE-->
+
+<!--Popout Logout-->
+
+<div class="Form">
+  <div class="close-btn">No</div>
+  <form action= "/JeekobsSportCenter_ADMIN/HTML/Admin-Login.html">
+    <p>Log out?</p>
+    <button type="submit">Yes</button>
+  </form>  
+</div>
+<!--Popout Logout-->
+
+       </div>   
+     </div>
+
+    <div class="mainContainer">
+
+      <div class="tag"><p>Dashboard</p></div>
+
+       <div class="container1">
+        <div class="totalsales">
+        <p>Total Sales</p>
+        <i class='bx bx-dollar'></i>
+        <p id="num">0</p>
+         </div>
+         <div class="totalorders">
+          <p>Total Orders</p>
+          <i class='bx bxs-cart' ></i>
+          <p id="num">0</p>
+         </div>
+         <div class="totalproducts">
+          <p>Total Products</p>
+          <i class='bx bxs-shopping-bag' ></i>
+          <p id="num">0</p>
+      </div>
+    </div>
+
+    <div class="label">
+      <p>Latest Orders</p>
+    </div>
+
+    <div class="table-scroll">
+      <table id="T1" class="table">
+      <tr>
+        <thead>
+        <th>Order no.</th>
+        <th>Name</th>
+        <th>Gmail</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Date</th>
+      </thead>
+      </tr>
+        <tr>
+        <td>1</td>
+        <td><img src="/JeekobsSportCenter_ADMIN/Users/Zenujin.jpg" alt="">Zenujin</td>
+        <td>Beruu@gmail.com</td>
+        <td>69$</td>
+        <td>Pending</td>
+        <td>30/04/2024</td>
+       </tr>
+        <tr>
+        <td>1</td>
+        <td><img src="/JeekobsSportCenter_ADMIN/Users/Shampoo.jpg" alt="">Shampoo Girl</td>
+        <td>Palmolive@gmail.com</td>
+        <td>9$</td>
+        <td>Completed</td>
+        <td>20/04/2024</td>
+       </tr>
+        <tr>
+        <td>1</td>
+        <td><img src="/JeekobsSportCenter_ADMIN/Users/kenneth Dominguez.jpg" alt="">Kenneth Dominguez</td>
+        <td>Dominguez@gmail.com</td>
+        <td>40$</td>
+        <td>Dispatched</td>
+        <td>10/04/2024</td>
+       </tr>
+        <tr>
+        <td>1</td>
+        <td><img src="/JeekobsSportCenter_ADMIN/Users/Herwayne Cawili.jpg" alt="">Herwayne Cawili</td>
+        <td>Keerst@gmail.com</td>
+        <td>20$</td>
+        <td>Pending</td>
+        <td>15/04/2024</td>
+       </tr>
+        <tr>
+        <td>1</td>
+        <td><img src="/JeekobsSportCenter_ADMIN/Users/Little Girl.jpg" alt="">Cry Girl</td>
+        <td>Iyak@gmail.com</td>
+        <td>27$</td>
+        <td>Completed</td>
+        <td>29/04/2024</td>
+       </tr>     
+      </table>
+    </div>
+  
+  </div>
+
+   
+    <script>
+
+  document.querySelector("#show-logout").addEventListener("click",function(){
+    document.querySelector(".Form").classList.add("active");
+});
+document.querySelector(".Form .close-btn").addEventListener("click",function(){
+    document.querySelector(".Form").classList.remove("active");
+});
+
+</script>
+
+</body>
+</html>

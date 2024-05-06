@@ -1,0 +1,435 @@
+@import url( 'https://fonts.goolgleapis.com/css?family=Poppins:400,500,700');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 100;
+       color:black;
+   }
+
+body{
+    background: rgb(223, 222, 222);
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 250px;
+    background: white;
+    padding: 10px;
+    padding-bottom: 260px;
+}
+
+.box{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 85px;
+}
+
+
+.profile p {
+   margin-left: 100px;
+   transform: translateY(37px);
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.box .profile img{
+    height: 100px;
+    width: 100px;
+    transform: translateY(-40px);
+    padding: 15px;
+    border-radius: 100%;
+}
+
+
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a {
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar i{
+    color: gray;
+    font-size: 45px;
+    position: absolute;
+    transform: translateY(-57px);
+    margin-left: 19px;
+}
+
+.navbar a:hover{
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    box-shadow: 10px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.Dashboard a{
+    background-color: white;
+    box-shadow: 10px 10px 20px aqua;
+}
+
+.navbar .Dashboard a{
+    border-radius: 20px;
+    color: aqua;
+}
+.navbar .Dashboard i{
+    color: aqua;
+}
+
+
+/* DROPDOWN */
+
+.navbar .settings-dropdown a{
+    background-color: white;
+    display: block;
+}
+
+.settings-dropdown .arrow i{
+    left: 195px;
+    margin: 14px;
+    position: absolute;
+    font-size: 20px;
+    cursor:default;
+}
+.settings-dropdown a:hover .arrow i{
+    transform:rotateY(180deg);
+}
+
+ul.settings-dropdown a:hover{
+   display: block;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+   border-radius: 10px 10px 10px 10px;
+}
+.settings-dropdown:hover .Logout{
+    position: absolute;
+    display: block;
+}
+
+.Logout{
+    margin: 1px;
+    z-index: 999;
+    display: none;
+}
+.settings-dropdown .Logout i {
+    color: gray;
+    position: absolute;
+    margin-top: 63px;
+}
+
+.Logout button{
+    position: absolute;
+    color: gray;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;  
+}
+.Logout i{
+    margin-left: 37px;
+    font-size: 35px;
+}
+
+ button:hover{
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 20px;
+}
+
+
+/*Pop out window*/
+
+.Form{
+    width: 425px;
+    height: 277px;
+    box-shadow:  10px 10px 20px;
+    border-radius: 30px;
+    background-color:white;
+    position: absolute;
+    left: 55%;
+    top: -150%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);  
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+                z-index: 1000;
+}
+.Form.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);  
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.Form p{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.Form button{
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 50px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.Form .close-btn{
+    color: black;
+    font-size:50px;
+    position: absolute;
+    left: 270px;
+    top: 160px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.Form .close-btn:hover{
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 20px;
+    color: red;
+}
+.Form a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+    margin-left: 80px;
+}
+.Form button:hover{
+    transition: 0.4s ease-in-out;
+    color: lime;
+}
+
+/*Pop out window*/
+
+
+
+.mainContainer{
+    display: block;
+    background-color: white;
+    width: 1650px;
+    height: 940px;
+   margin: auto;
+   border-radius: 20px;
+   box-shadow: 10px 10px 20px;
+   overflow-y: auto;
+}
+
+.mainContainer .tag{
+     padding-top: 15px;
+     position: relative;
+      margin-left: 25px;
+      font-size: 32px;    
+}
+
+.tag p{
+    font-weight: bold;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    width: 1600px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 33px;
+}
+
+
+.container1 .totalsales{
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px gray;
+}
+.totalsales p{
+    color: black;
+    position: relative;
+    font-size: 35px;
+    margin-top: 35px;
+    margin-left: 150px;
+}
+.totalsales i{
+    position: absolute;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: green;
+    color: white;
+    font-size: 70px;
+    margin-left: 20px;
+    transform: translateY(-30px);
+}
+
+
+
+.container1 .totalorders{
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px gray;
+}
+.totalorders p{
+    color: black;
+    position: relative;
+    font-size: 35px;
+    margin-top: 35px;
+    margin-left: 150px;
+}
+.totalorders i{
+    position: absolute;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: orange;
+    color: white;
+    font-size: 70px;
+    margin-left: 20px;
+    transform: translateY(-30px);
+}
+
+.container1 .totalproducts{
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px gray;
+}  
+.totalproducts p{
+    color: black;
+    position: relative;
+    font-size: 35px;
+    margin-top: 35px;
+    margin-left: 150px;
+}
+.totalproducts i{
+    position: absolute;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: #2B479D;
+    color: white;
+    font-size: 70px;
+    margin-left: 20px;
+    transform: translateY(-30px);
+} 
+
+.label{
+    position: absolute;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.table-scroll{
+    width: 1550px;
+    height: 530px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    overflow-y: auto;
+    box-shadow: 5px 5px 15px;
+}
+
+.table-scroll > .table{
+    width: 100%;
+}
+
+.table {
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+.table tr{
+    scroll-snap-align: start;
+    border-bottom: 1px solid gray;
+    transition: 0.2s ease;
+}
+.table tr:hover{
+    background-color: rgba(255, 228, 196, 0.329);
+    transition: 0.3s ease;
+}
+.table th{   
+    overflow-y: scroll;
+    background-color: aqua;
+    height: 80px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.table td{
+    padding: 10px;
+    padding-left: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+tr img{
+    display: inline-flex;
+    margin-right: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+}
+
+::-webkit-scrollbar{
+    width: .7vw;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color:aqua;
+    border-radius: 100vw;
+    width: .9vw;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 100vw;
+    margin-block: 2em;
+}
+
+
+@media (max-width: 1880px){
+    .mainContainer{
+        width: 1500px;
+    }
+}

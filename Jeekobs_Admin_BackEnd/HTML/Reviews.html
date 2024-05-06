@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Reviews.css">
+    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidebar">
+       <div class="box">
+         <div class="profile">
+            <p>Admin</p>
+            <img src="/JeekobsSportCenter_ADMIN/Users/Admin.jpg" alt="">
+         </div>
+       </div>
+
+     <div class="navbar">
+      <ul>
+        <li>
+          <a href="/JeekobsSportCenter_ADMIN/HTML/Dashboard.html">Dashboard</a>
+          <i class='bx bxs-dashboard'></i>
+       </li>
+      <li>
+        <a href="/JeekobsSportCenter_ADMIN/HTML/Products.html">Products</a>
+        <i class='bx bx-package'></i>
+      </li>
+      <li>
+        <a href="/JeekobsSportCenter_ADMIN/HTML/Orders.html">Orders</a>
+        <i class='bx bx-clipboard'></i>
+     </li>
+     <div class="Reviews">
+      <li>
+          <a>Reviews</a>
+          <i class='bx bxs-message-alt-detail'></i>
+       </li>
+      </div>
+      <li>
+          <a href="/JeekobsSportCenter_ADMIN/HTML/Users.html">Users</a>
+          <i class='bx bxs-user-badge'></i>
+       </li>
+        <!--DORPDOWN-->
+        <ul class="settings-dropdown">
+          <li>
+            <a>Settings</a>
+            <i class='bx bxs-cog' ></i>
+            <div class="arrow"><i class='bx bxs-down-arrow'></i></i></i></div>
+         </li>
+         <div class="product-management">
+      </div>
+         <li>
+        <div class="Logout">
+          <button id="show-logout">Logout</button>
+           <i class='bx bxs-log-out' ></i>
+      </div>    
+         </li>
+        </ul>
+         <!--DORPDOWN-->
+      </ul>
+
+<!--Popout Logout-->
+<div class="Form">
+  <div class="close-btn">NO</div>
+  <form action="/JeekobsSportCenter_ADMIN/HTML/Admin-Login.html">
+    <p>LOGOUT?</p>
+    <button type="submit">YES</button>
+  </form>  
+</div>
+<!--Popout Logout-->
+
+       </div>   
+     </div>
+
+     <div class="container-bg">
+      
+       <div class="tag"><p>Reviews</p></div>
+
+      <div class="table-scroll">
+        <table id="T1" class="table">
+        <tr>
+          <thead>
+          <th>Review Name</th>
+          <th>username</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </thead>
+        </tr>
+          <tr>
+          <td id="review-name">Their product quality is good...</td>
+          <td><img src="/JeekobsSportCenter_ADMIN/Users/Coco Martin.png" alt="">Coco Martin</td>
+          <td>Quezon City</td>
+          <td>Active</td>
+          <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
+         </tr>
+          <tr>
+          <td id="review-name">This Jeekobs Sport Center has a good system of services...</td>
+          <td><img src="/JeekobsSportCenter_ADMIN/Users/John lloyd Cruz.jpg" alt="">John Lloyd Cruz</td>
+          <td>Pasay City</td>
+          <td>Active</td>  
+          <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
+         </tr>
+          <tr>
+          <td id="review-name">Their Interface is beginner friendly...</td>
+          <td><img src="/JeekobsSportCenter_ADMIN/Users/Juniboy.jpg" alt="">Juniboy</td>
+          <td>Muntinlupa</td>
+          <td>Active</td>  
+          <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>    
+         </tr>
+          <tr>
+          <td id="review-name">They have the simplest design...</td>
+          <td><img src="/JeekobsSportCenter_ADMIN/Users/Cong.png" alt="">Cong</td>
+          <td>Bacoor, Cavite</td>
+          <td>Removed</td>   
+          <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
+         </tr>
+          <tr>
+          <td id="review-name">Overall, this website is best WOW!</td>
+          <td><img src="/JeekobsSportCenter_ADMIN/Users/Jackie Chan.png" alt="">Jackie Chan</td>
+          <td>Beverly Hills</td>
+          <td>Removed</td>   
+          <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
+         </tr>
+        </table>
+      </div>
+    </div>
+     </div>
+
+     <script>
+
+      document.querySelector("#show-logout").addEventListener("click",function(){
+        document.querySelector(".Form").classList.add("active");
+    });
+    document.querySelector(".Form .close-btn").addEventListener("click",function(){
+        document.querySelector(".Form").classList.remove("active");
+    });
+    
+    </script>
+</body>
+</html>

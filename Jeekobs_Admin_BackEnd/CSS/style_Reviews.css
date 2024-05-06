@@ -1,0 +1,359 @@
+@import url( 'https://fonts.goolgleapis.com/css?family=Poppins:400,500,700');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 100;
+       color:black;
+   }
+
+   body{
+    background: rgb(223, 222, 222);
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 250px;
+    background: white;
+    padding: 10px;
+}
+
+.box{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 85px;
+}
+
+
+.profile p {
+    margin-left: 100px;
+    transform: translateY(37px);
+     font-size: 32px;
+     color: black;
+     font-weight: bold;
+     
+ }
+ 
+ .box .profile img{
+     height: 100px;
+     width: 100px;
+     transform: translateY(-40px);
+     padding: 15px;
+     border-radius: 100%;
+ }
+
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a {
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar i{
+    color: gray;
+    font-size: 45px;
+    position: absolute;
+    transform: translateY(-57px);
+    margin-left: 19px;
+}
+
+.navbar a:hover{
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    box-shadow: 10px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.Reviews a{
+    background-color: white;
+    box-shadow: 10px 10px 20px aqua;
+}
+
+.navbar .Reviews a{
+    border-radius: 20px;
+    color: aqua;
+}
+.navbar .Reviews i{
+    color: aqua;
+}
+
+
+/* DROPDOWN */
+
+.navbar .settings-dropdown a{
+    background-color: white;
+    display: block;
+}
+
+.settings-dropdown .arrow i{
+    left: 195px;
+    margin: 14px;
+    position: absolute;
+    font-size: 20px;
+    cursor:default;
+}
+.settings-dropdown a:hover .arrow i{
+    transform:rotateY(180deg);
+}
+
+ul.settings-dropdown a:hover{
+   display: block;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+   border-radius: 10px 10px 10px 10px;
+}
+.settings-dropdown:hover .Logout{
+    position: absolute;
+    display: block;
+}
+
+.Logout{
+    margin: 1px;
+    z-index: 999;
+    display: none;
+}
+.settings-dropdown .Logout i {
+    color: gray;
+    position: absolute;
+    margin-top: 63px;
+}
+
+.Logout button{
+    position: absolute;
+    color: gray;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;  
+}
+.Logout i{
+    margin-left: 37px;
+    font-size: 35px;
+}
+
+ button:hover{
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 20px;
+}
+
+/* DROPDOWN */
+
+/*Pop out window*/
+.Form{
+    width: 425px;
+    height: 277px;
+    box-shadow:  10px 10px 20px;
+    border-radius: 30px;
+    background-color:white;
+    position: absolute;
+    left: 55%;
+    top: -150%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);  
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+                z-index: 1000;
+}
+.Form.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);  
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+.Form p{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.Form button{
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 50px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+.Form .close-btn{
+    color: black;
+    font-size:50px;
+    position: absolute;
+    left: 270px;
+    top: 160px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.Form .close-btn:hover{
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 20px;
+    color: red;
+}
+.Form a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+    margin-left: 80px;
+}
+.Form button:hover{
+    transition: 0.4s ease-in-out;
+    color: lime;
+}
+
+/*Pop out window*/
+
+
+.container-bg{
+    background-color: white;
+    width: 1650px;
+    height: 940px;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.container-bg .tag{
+    margin-top: 1px;
+    position: absolute;
+     margin-left: 10px;
+     font-size: 32px;    
+}
+
+.tag p{
+   font-weight: bold;
+}
+
+.table-scroll{
+    width: 1550px;
+    height: 780px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    overflow-y: auto;
+    box-shadow: 5px 5px 15px;
+}
+
+.table-scroll > .table{
+    width: 100%;
+}
+
+.table {
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+.table tr{
+    scroll-snap-align: start;
+    border-bottom: 1px solid gray;
+    transition: 0.2s ease;
+}
+.table tr:hover{
+    box-shadow: 5px 5px 10px;
+    transition: 0.3s ease;
+}
+.table th{   
+    overflow-y: scroll;
+    background-color: aqua;
+    height: 80px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.table td{
+    padding: 10px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.table tr .actions i{
+    color: gray;
+    margin-left: 20px; 
+    padding: 5px;
+    transition: 0.1s ease-in-out;
+}
+
+.table tr .actions i:hover {
+    color: black;
+    font-size: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+.table tr i#trash{
+    color: gray;
+    transition: 0.1s ease-in-out;
+}
+
+.table tr i#trash:hover{
+    font-size: 30px;
+    color: red;
+    transition: 0.2s ease-in-out;
+}
+
+tr img{
+    display: inline-flex;
+    margin-right: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+}
+
+.table tr td#review-name{
+    display: flex;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar{
+    width: .7vw;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color:aqua;
+    border-radius: 100vw;
+    width: .9vw;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 100vw;
+    margin-block: 2em;
+}
+    
+
