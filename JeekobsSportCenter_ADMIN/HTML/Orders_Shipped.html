@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
-    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Orders_Dispatched.css">
-    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
+    <link rel="stylesheet" href="../CSS/style_Orders_Shipped.css">
+    <link rel="icon" type="image/jpg" href="../Logo/Logo3.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -14,18 +14,18 @@
        <div class="box">
          <div class="profile">
             <p>Admin</p>
-            <img src="/JeekobsSportCenter_ADMIN/Users/Admin.jpg" alt="">
+            <img src="../Logo/Logo3.png" alt="">
          </div>
        </div>
 
      <div class="navbar">
       <ul>
         <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Dashboard.html">Dashboard</a>
+          <a href="../HTML/Dashboard.html">Dashboard</a>
           <i class='bx bxs-dashboard'></i>
        </li>
       <li>
-        <a href="/JeekobsSportCenter_ADMIN/HTML/Products.html">Products</a>
+        <a href="../HTML/Products.html">Products</a>
         <i class='bx bx-package'></i>
       </li>
       <div class="Orders">
@@ -35,14 +35,14 @@
      </li>
     </div>
       <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Reviews.html">Reviews</a>
+          <a href="../HTML/Reviews.html">Reviews</a>
           <i class='bx bxs-message-alt-detail'></i>
        </li>
       <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Users.html">Users</a>
+          <a href="../HTML/Users.html">Users</a>
           <i class='bx bxs-user-badge'></i>
        </li>
-       <!--DORPDOWN-->
+       <!--DROPDOWN-->
        <ul class="settings-dropdown">
         <li>
           <a>Settings</a>
@@ -58,88 +58,102 @@
     </div>    
        </li>
       </ul>
-       <!--DORPDOWN-->
+       <!--DROPDOWN-->
       </ul>
-
-<!--Popout Logout-->
-<div class="Form">
-  <div class="close-btn">NO</div>
-  <form action="/JeekobsSportCenter_ADMIN/HTML/Admin-Login.html">
-    <p>LOGOUT?</p>
-    <button type="submit">YES</button>
-  </form>  
-</div>
-<!--Popout Logout-->
 
        </div>   
      </div>
 
     <div class="container">
       
-    <div class="tag"><p>Orders > Dispatched</p></div>
+    <div class="tag"><p>Orders > Shipped</p></div>
 
       <div class="nav_bar">       
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Orders.html">All orders</a>
+          <a href="../HTML/Orders.html">All orders</a>
 
           <div class="selected">
-               <a>Dispatched</a>
+               <a>Shipped</a>
             </div>
-            <a href="/JeekobsSportCenter_ADMIN/HTML/Orders_Pending.html">Pending</a>
-        <a href="/JeekobsSportCenter_ADMIN/HTML/Orders_Completed.html">Completed</a>
+            <a href="../HTML/Orders_Pending.html">Pending</a>
+        <a href="../HTML/Orders_Completed.html">Completed</a>
       </div>
 
      <div class="table-scroll">
       <table id="T1" class="table">
       <tr>
         <thead>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Date</th>
-        <th>Price</th>
-        <th>Status</th>
-        <th>Action</th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>OrderName</th>
+          <th>Address</th>
+          <th>Date</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Action</th>
       </thead>
       </tr>
       <tr>
         <td>2</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Allen Tan.jpg" alt="">Allen Tan</td>
+        <td><img src="../Users/Allen Tan.jpg" alt="">Allen Tan</td>
+        <td>SBall</td>
         <td>Zamboanga City</td>
         <td>11/02/2024</td>
+        <td>2</td>
         <td>60$</td>
-        <td>Dispatched</td>
+        <td>Shipped</td>
         <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt' id="trash"></i></a></td>
       </tr>
       <tr>
         <td>7</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Caloocan Boy.jpg" alt="">Caloocan Boy</td>
+        <td><img src="../Users/Caloocan Boy.jpg" alt="">Caloocan Boy</td>
+        <td>SBall</td>
         <td>Zamboanga City</td>
         <td>02/03/2024</td>
+        <td>1</td>
         <td>68$</td>
-        <td>Dispatched</td>
+        <td>Shipped</td>
         <td class="actions"><a href=""><i class='bx bx-edit-alt'><i class='bx bx-trash-alt' id="trash"></i></a></td>
       </tr>
       <tr>
         <td>10</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Gio Guevarra.jpg" alt="">Gioiel Guevarra</td>
+        <td><img src="../Users/Gio Guevarra.jpg" alt="">Gioiel Guevarra</td>
+        <td>SBall</td>
         <td>Zamboanga City</td>
         <td>05/01/2024</td>
+        <td>8</td>
         <td>25$</td>
-        <td>Dispatched</td>
+        <td>Shipped</td>
         <td class="actions"><a href=""><i class='bx bx-edit-alt'><i class='bx bx-trash-alt' id="trash"></i></a></td>
        </tr>
       </table>
     </div>
   </div>
 
+  <!--Popout Logout-->
+
+<div id="modal-bg" class="modal">  
+  <form action= "index.html" class="modal-content">
+  <p>Log out?</p>
+  <button type="submit">Yes</button>
+  <span class="close-btn">No</span>
+  </form>  
+  </div>
+  <!--Popout Logout-->
+
   <script>
 
-    document.querySelector("#show-logout").addEventListener("click",function(){
-      document.querySelector(".Form").classList.add("active");
-  });
-  document.querySelector(".Form .close-btn").addEventListener("click",function(){
-      document.querySelector(".Form").classList.remove("active");
-  });
+var modal = document.getElementById("modal-bg");
+  var btn = document.getElementById("show-logout");
+    var span = document.getElementsByClassName("close-btn")[0];
+
+  btn.onclick = function() {
+  modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+  modal.style.display = "none";
+  }
   
   </script>
 </body>

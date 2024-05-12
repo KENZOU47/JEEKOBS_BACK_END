@@ -18,7 +18,7 @@ body{
     min-height: 100vh;
 }
 
-.wrapper{
+.container{
     width: 425px;
     height: 468px;
     background-color: white;
@@ -27,14 +27,14 @@ body{
     border-radius: 30px;
 }
 
-.wrapper p {
+.container p {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
 }
 
-.wrapper .input-box{
+.container .input-box{
     position: relative;
     width: 354px;
     height: 58px;
@@ -58,7 +58,7 @@ body{
     border: none;
 }
 
-.wrapper i {
+.container i {
     font-size: 25px;
     position: absolute;
     right: 20px;
@@ -71,7 +71,7 @@ body{
     color: black;
 }
 
-.wrapper .btn {
+.container .btn {
     width: 270px;
     height: 52px;
     border-radius: 20px;
@@ -92,7 +92,7 @@ body{
     transition:  0.4s ease-in-out;
 }
 
-.wrapper a{
+.container a{
     display: block;
     text-align: center;
     margin-top: 40px;
@@ -101,36 +101,36 @@ body{
 }
 
 @media (max-width: 424px){
-    .wrapper{
+    .container{
         width: 300px;
     }
-    .wrapper .input-box{
+    .container .input-box{
         width: 230px;
     }
     .input-box input{
         font-size: 20px;
     }
-    .wrapper .input{
+    .container .input{
         width: 100%;
     }
-    .wrapper .btn{
+    .container .btn{
         width: 150px;
     }
-    .wrapper i{
+    .container i{
         right: 10px;
     }
 }
 
 @media  (max-height: 471px) {
-    .wrapper{
+    .container{
         width: 280px;
         height: 350px;
     }
-    .wrapper p{
+    .container p{
         font-size: 35px;
         margin-top: 30px;
     }
-    .wrapper .input-box{
+    .container .input-box{
         width: 200px;
         margin-top: 20px;
     }
@@ -140,14 +140,14 @@ body{
     .input-box .input{
         font-size: 10px;
     }
-    .wrapper .btn{
+    .container .btn{
         width: 150px;
         font-size: 18px;
         height: 40px;
         margin-left: 68px;
         margin-top: 5px;
     }
-    .wrapper i{
+    .container i{
         right: 8px;
         font-size: 20px;
     }

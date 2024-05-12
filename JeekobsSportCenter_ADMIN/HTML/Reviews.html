@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
-    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Reviews.css">
-    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
+    <link rel="stylesheet" href="../CSS/style_Reviews.css">
+    <link rel="icon" type="image/jpg" href="../Logo/Logo3.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -14,22 +14,22 @@
        <div class="box">
          <div class="profile">
             <p>Admin</p>
-            <img src="/JeekobsSportCenter_ADMIN/Users/Admin.jpg" alt="">
+            <img src="../Logo/Logo3.png" alt="">
          </div>
        </div>
 
      <div class="navbar">
       <ul>
         <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Dashboard.html">Dashboard</a>
+          <a href="../HTML/Dashboard.html">Dashboard</a>
           <i class='bx bxs-dashboard'></i>
        </li>
       <li>
-        <a href="/JeekobsSportCenter_ADMIN/HTML/Products.html">Products</a>
+        <a href="../HTML/Products.html">Products</a>
         <i class='bx bx-package'></i>
       </li>
       <li>
-        <a href="/JeekobsSportCenter_ADMIN/HTML/Orders.html">Orders</a>
+        <a href="../HTML/Orders.html">Orders</a>
         <i class='bx bx-clipboard'></i>
      </li>
      <div class="Reviews">
@@ -39,10 +39,10 @@
        </li>
       </div>
       <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Users.html">Users</a>
+          <a href="../HTML/Users.html">Users</a>
           <i class='bx bxs-user-badge'></i>
        </li>
-        <!--DORPDOWN-->
+        <!--DROPDOWN-->
         <ul class="settings-dropdown">
           <li>
             <a>Settings</a>
@@ -58,18 +58,8 @@
       </div>    
          </li>
         </ul>
-         <!--DORPDOWN-->
+         <!--DROPDOWN-->
       </ul>
-
-<!--Popout Logout-->
-<div class="Form">
-  <div class="close-btn">NO</div>
-  <form action="/JeekobsSportCenter_ADMIN/HTML/Admin-Login.html">
-    <p>LOGOUT?</p>
-    <button type="submit">YES</button>
-  </form>  
-</div>
-<!--Popout Logout-->
 
        </div>   
      </div>
@@ -84,42 +74,42 @@
           <thead>
           <th>Review Name</th>
           <th>username</th>
-          <th>Date</th>
+          <th>Address</th>
           <th>Status</th>
           <th>Actions</th>
         </thead>
         </tr>
           <tr>
           <td id="review-name">Their product quality is good...</td>
-          <td><img src="/JeekobsSportCenter_ADMIN/Users/Coco Martin.png" alt="">Coco Martin</td>
+          <td><img src="../Users/Coco Martin.png" alt="">Coco Martin</td>
           <td>Quezon City</td>
           <td>Active</td>
           <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
          </tr>
           <tr>
           <td id="review-name">This Jeekobs Sport Center has a good system of services...</td>
-          <td><img src="/JeekobsSportCenter_ADMIN/Users/John lloyd Cruz.jpg" alt="">John Lloyd Cruz</td>
+          <td><img src="../Users/John lloyd Cruz.jpg" alt="">John Lloyd Cruz</td>
           <td>Pasay City</td>
           <td>Active</td>  
           <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
          </tr>
           <tr>
           <td id="review-name">Their Interface is beginner friendly...</td>
-          <td><img src="/JeekobsSportCenter_ADMIN/Users/Juniboy.jpg" alt="">Juniboy</td>
+          <td><img src="../Users/Juniboy.jpg" alt="">Juniboy</td>
           <td>Muntinlupa</td>
           <td>Active</td>  
           <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>    
          </tr>
           <tr>
           <td id="review-name">They have the simplest design...</td>
-          <td><img src="/JeekobsSportCenter_ADMIN/Users/Cong.png" alt="">Cong</td>
+          <td><img src="../Users/Cong.png" alt="">Cong</td>
           <td>Bacoor, Cavite</td>
           <td>Removed</td>   
           <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
          </tr>
           <tr>
           <td id="review-name">Overall, this website is best WOW!</td>
-          <td><img src="/JeekobsSportCenter_ADMIN/Users/Jackie Chan.png" alt="">Jackie Chan</td>
+          <td><img src="../Users/Jackie Chan.png" alt="">Jackie Chan</td>
           <td>Beverly Hills</td>
           <td>Removed</td>   
           <td class="actions"><a href=""><i class='bx bx-edit-alt'></i><i class='bx bx-trash-alt'  id="trash"></i></a></td>
@@ -129,14 +119,30 @@
     </div>
      </div>
 
+     <!--Popout Logout-->
+
+<div id="modal-bg" class="modal">  
+  <form action= "index.html" class="modal-content">
+  <p>Log out?</p>
+  <button type="submit">Yes</button>
+  <span class="close-btn">No</span>
+  </form>  
+  </div>
+  <!--Popout Logout-->
+
      <script>
 
-      document.querySelector("#show-logout").addEventListener("click",function(){
-        document.querySelector(".Form").classList.add("active");
-    });
-    document.querySelector(".Form .close-btn").addEventListener("click",function(){
-        document.querySelector(".Form").classList.remove("active");
-    });
+var modal = document.getElementById("modal-bg");
+  var btn = document.getElementById("show-logout");
+    var span = document.getElementsByClassName("close-btn")[0];
+
+  btn.onclick = function() {
+  modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+  modal.style.display = "none";
+  }
     
     </script>
 </body>

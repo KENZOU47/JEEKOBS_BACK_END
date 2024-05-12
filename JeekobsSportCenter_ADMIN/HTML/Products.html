@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../CSS/style_Products.css">
+    <link rel="icon" type="image/jpg" href="../Logo/Logo3.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidebar">
+       <div class="box">
+         <div class="profile">
+            <p>Admin</p>
+            <img src="../Logo/Logo3.png" alt="">
+         </div>
+       </div>
+
+     <div class="navbar">
+      <ul>
+        <li>
+          <a href="../HTML/Dashboard.html">Dashboard</a>
+          <i class='bx bxs-dashboard'></i>
+       </li>
+      <div class="Products">
+      <li>
+        <a>Products</a>
+        <i class='bx bx-package'></i>
+      </li>
+    </div>
+      <li>
+        <a href="../HTML/Orders.html">Orders</a>
+        <i class='bx bx-clipboard'></i>
+     </li>
+      <li>
+          <a href="../HTML/Reviews.html">Reviews</a>
+          <i class='bx bxs-message-alt-detail'></i>
+       </li>
+      <li>
+          <a href="../HTML/Users.html">Users</a>
+          <i class='bx bxs-user-badge'></i>
+       </li>
+        <!--DROPDOWN-->
+        <ul class="settings-dropdown">
+          <li>
+            <a>Settings</a>
+            <i class='bx bxs-cog' ></i>
+            <div class="arrow"><i class='bx bxs-down-arrow'></i></i></i></div>
+         </li>
+         <div class="product-management">
+      </div>
+         <li>
+        <div class="Logout">
+          <button id="show-logout">Logout</button>
+           <i class='bx bxs-log-out' ></i>
+      </div>    
+         </li>
+        </ul>
+         <!--DROPDOWN-->
+      </ul>
+
+       </div>   
+     </div>
+
+     <div class="container"> 
+
+      <div class="tag"><p>Products</p></div>
+      
+      <div class="add-products-btn">
+        <button id="add-prod">Add Products</button>
+      </div>
+
+    <div class="wrapper">
+
+
+      <!-- PHP logic to display products
+      <?php
+      // Dummy products data
+      $products = array(
+         
+          // Add more products here
+      );
+
+      // Display products
+      foreach ($products as $product) {
+          echo "<div class='Volleyball'>";
+          echo "<img src='" . $product['image'] . "' alt=''>";
+          echo "<p>" . $product['name'] . " = " . $product['quantity'] . "</p>";
+          echo "<div class='Config'>";
+          echo "<div class='add'><a href=''>Add</a><i class='bx bx-plus-circle'></i></div>";
+          echo "<div class='delete'><a href=''>Remove</a><i class='bx bxs-trash'></i></div>";
+          echo "</div></div>";
+      }
+      ?> -->
+     
+          <div class="Volleyball">
+            <img src="../Products/VShirt.png" alt="">
+               <p >V.T-Shirt:  <span id = "quantity">1</span> </p>
+              
+
+               <div class="Config">
+                   <div class="add">
+                    <button id="configAdd">Add</button>
+                    <i class='bx bx-plus-circle' ></i>
+               </div>
+                   <div class="delete">
+                   <button id="configRemove">Remove</button>
+                   <i class='bx bxs-trash' ></i>
+               </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+        <!-- Popout Add Products -->
+        
+          <div id="modal-products" class="modal-products">
+
+            <form action="" class="modalproducts-content">
+              <span class="cancel">&times;</span>
+              <h1>Add a new Product</h1>
+
+               <!-- PHP form handling
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Dummy logic to add product
+                $productName = $_POST['product_name'];
+                $productPrice = $_POST['price'];
+                // Dummy product addition logic, replace with actual database insertion
+                echo "<p>New product added: $productName, Price: $productPrice</p>";
+            }
+            ?> -->
+
+              <input type="text" placeholder="Name of the product" required><br><br>
+              <label for="price">Price:</label>
+              <input type="number" id="price" name="price" min="1" max="99999" required><br><br>
+              <label for="image">Product Image</label>
+              <input type="file" id="image" name="image" required> <br><br><br>
+              <button type="submit" id="submitbtn">Add the product</button>
+            </form>
+
+          </div>
+          
+            
+    <!-- Popout Update Product Modal -->
+    <div id="update-modal" class="modalConfigAdd">
+        <div class="modal-content-add">
+            <span class="add-close" onclick="closeUpdateModal()">&times;</span>
+            <h2>Update Product</h2>
+            <form method="post" action="">
+                <input type="text" id="update-name" name="name" placeholder="Product Name" required><br><br>
+                <input type="number" id="update-quantity" name="quantity" placeholder="Quantity" required><br><br>
+                <input type="file" id="update-image" name="image" required><br><br>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div> 
+
+    <!-- Popout Delete Confirmation Modal -->
+    <div id="delete-modal" class="modalConfigRemove">
+        <div class="modal-content-remove">
+            <span class="remove-close" onclick="closeDeleteModal()">&times;</span>
+            <h2>Confirm Delete</h2>
+            <p>Are you sure you want to remove this product?</p>
+            <button onclick="deleteProduct()">Yes, Remove</button>
+        </div>
+    </div> 
+
+
+        <!--Popout Logout-->
+
+<div id="modal-bg" class="modal">  
+  <form action= "index.html" class="modal-content">
+  <p>Log out?</p>
+  <button type="submit">Yes</button>
+  <span class="close-btn">No</span>
+  </form>  
+  </div>
+
+
+<script>
+
+  // <!--Popout Logout--> //
+  var modal = document.getElementById("modal-bg");
+  var btn = document.getElementById("show-logout");
+  var span = document.getElementsByClassName("close-btn")[0];
+  
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // <!--Popout Add Products--> //
+  var modalprod = document.getElementById("modal-products");
+ var button = document.getElementById("add-prod");
+  var cancel = document.getElementsByClassName("cancel")[0];
+ 
+  button.onclick = function() {
+   modalprod.style.display = "block";
+  }
+ 
+  cancel.onclick = function() {
+   modalprod.style.display = "none";
+  }
+
+
+  // CONFIGURE PRODUCTS //
+      var modaladd = document.getElementById("update-modal");
+        var buttonadd = document.getElementById("configAdd");
+         var addclose = document.getElementsByClassName("add-close")[0];
+ 
+        buttonadd.onclick = function() {
+           modaladd.style.display = "block";
+      }
+ 
+      addclose.onclick = function() {
+         modaladd.style.display = "none";
+      }
+
+
+      var modalclose = document.getElementById("delete-modal");
+        var buttonclose = document.getElementById("configRemove");
+         var removeclose = document.getElementsByClassName("remove-close")[0];
+ 
+        buttonclose.onclick = function() {
+           modalclose.style.display = "block";
+      }
+ 
+      removeclose.onclick = function() {
+         modalclose.style.display = "none";
+      }
+
+ </script>
+</body>
+</html>

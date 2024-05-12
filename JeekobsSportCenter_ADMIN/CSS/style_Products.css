@@ -1,0 +1,589 @@
+@import url( 'https://fonts.goolgleapis.com/css?family=Poppins:400,500,700');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 100;
+       color:black;
+   }
+
+   body{
+    background: rgb(223, 222, 222);
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 250px;
+    background: white;
+    padding: 10px;
+}
+
+.box{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 85px;
+}
+
+
+.profile p {
+    margin-left: 100px;
+    transform: translateY(37px);
+     font-size: 32px;
+     color: black;
+     font-weight: bold;
+     
+ }
+ 
+ .box .profile img{
+     height: 100px;
+     width: 100px;
+     transform: translateY(-40px);
+     padding: 15px;
+     border-radius: 100%;
+ }
+
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a {
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    margin-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.navbar i{
+    color: gray;
+    font-size: 45px;
+    position: absolute;
+    transform: translateY(-57px);
+    margin-left: 19px;
+}
+
+.navbar a:hover{
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    box-shadow: 10px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.Products a{
+    background-color: white;
+    box-shadow: 10px 10px 20px aqua;
+}
+
+.navbar .Products a{
+    border-radius: 20px;
+    color: aqua;
+}
+.navbar .Products i{
+    color: aqua;
+}
+
+
+/* DROPDOWN */
+
+.navbar .settings-dropdown a{
+    background-color: white;
+    display: block;
+}
+
+.settings-dropdown .arrow i{
+    left: 195px;
+    margin: 14px;
+    position: absolute;
+    font-size: 20px;
+    cursor:default;
+}
+.settings-dropdown a:hover .arrow i{
+    transform:rotateY(180deg);
+}
+
+ul.settings-dropdown a:hover{
+   display: block;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+   border-radius: 10px 10px 10px 10px;
+}
+.settings-dropdown:hover .Logout{
+    position: absolute;
+    display: block;
+}
+
+.Logout{
+    margin: 1px;
+    z-index: 999;
+    display: none;
+}
+.settings-dropdown .Logout i {
+    color: gray;
+    position: absolute;
+    margin-top: 63px;
+}
+
+.Logout button{
+    position: absolute;
+    color: gray;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;  
+}
+.Logout i{
+    margin-left: 37px;
+    font-size: 35px;
+}
+
+.Logout button:hover{
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    box-shadow: 10px 10px 20px;
+}
+
+/* DROPDOWN */
+
+
+/*Pop out window*/
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+   backdrop-filter: blur(10px);
+   transition: top 0.3s ease-in-out;
+  }
+  
+  .modal-content {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 16% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px; 
+    height: 250px;
+    position: relative;
+    box-shadow: 0px 5px 15px gray;
+  }
+
+  .modal.active{
+    transition: 0.3s ease-in-out;
+  }
+
+  .modal-content p{
+    margin-left:24%;
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    align-items: center;
+  }
+
+.modal-content button{
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 15%;
+    margin-top: 18%;
+    padding: 10px 18px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+  }
+
+.modal-content .close-btn{
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 54%;
+    margin-top: 18%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.modal-content button:hover,
+.close-btn:hover{
+    box-shadow: 5px 5px 5px grey;
+    transition: 0.2s ease-in-out;
+}
+  
+
+/* Popout Add Products */
+
+    .modal-products{
+        display: none; 
+        position: fixed; 
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; 
+       background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modalproducts-content{
+        position: relative;
+        background-color: white;
+        margin: 9% auto;
+        padding: 30px;
+        border-radius: 10px;
+        width: 550px; 
+        height: 500px;
+        position: relative;
+        box-shadow: 0px 5px 15px black;
+    }
+
+     .cancel{
+        position: absolute;
+        left: 510px;
+        margin-top: -20px;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .modalproducts-content h1{
+        margin-left: 75px;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    
+    .modalproducts-content label{
+        font-size: 18px;
+    }
+
+    .modalproducts-content input{
+        display: block;
+        padding: 5px 10px;
+        width: 100%;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .modalproducts-content input::placeholder{
+        font-size: 20px;
+    }
+
+    .modalproducts-content #image{
+        margin-left: -9px;
+        cursor: pointer;
+    }
+
+    .modalproducts-content button{
+        width: 100%;
+        height: 12%;
+        border-radius: 10px;
+        font-size: 25px;
+        background-color: aqua;
+        border: none;
+        transition: 0.3s ease-out;
+    }
+    .modalproducts-content button:hover{
+        background-color: bisque;
+        transition: 0.2s ease-in-out;
+        box-shadow: 0px 5px 5px gray;
+    }
+    
+
+
+    
+.container{
+    display: flex;
+    background-color: white;
+    width: 1655px;
+    height: 940px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.container .tag{
+    margin-top: -10px;
+    position: absolute;
+     margin-left: 1px;
+     font-size: 32px;    
+}
+
+.tag p{
+   font-weight: bold;
+}
+
+.add-products-btn {
+    position: absolute;
+    left: 1360px;
+    margin-top: -5px;
+}
+
+.add-products-btn button{
+    font-size: 25px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: gray;
+    transition: 0.1s ease-in-out;
+}
+
+.add-products-btn button:hover{
+    color: black;
+    transition: 0.2s ease-in-out;
+    box-shadow: 5px 5px 10px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    background-color: white;
+    width: 150%;
+    height: 800px;
+    gap: 40px;
+    margin-right: auto;
+    margin-left: 15px;
+    border-radius: 20px;
+    margin-top: 80px;
+    overflow-y: auto;
+}
+
+.label p{
+    position: absolute;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-size: 50px;
+    margin-left: 18%;
+    font-weight: bold;
+}
+
+
+
+.wrapper img{
+    display: flex;
+    width: 280px;
+    height: 240px;
+    margin-left: auto;
+    margin-top: 20px;
+    transition: 0.2s ease;
+}
+
+.wrapper img:hover{
+    transition: 0.2s ease;
+    padding: 10px;
+}
+
+.Volleyball{
+    position: relative;
+    width: 300px;
+    height: 430px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 70px;
+    box-shadow: 5px 10px 10px rgb(95, 88, 88);
+}
+
+.Volleyball p{
+    color: black;
+    margin-left: 45px;
+    margin-top: 20px;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+
+.Volleyball .Config{
+    display: flex;
+    margin-top: 40px;
+    height: 50px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.add {
+    position: relative;
+    margin-left: 12px;
+}
+
+.Config .add button{ 
+    position: relative;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: none;
+    color: gray;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+.add button:hover{
+    box-shadow: 5px 5px 5px;
+    transition: 0.2s ease;
+}
+
+.Config .add i{
+    cursor: pointer;
+    color: gray;
+    position: absolute;
+    font-size: 25px;
+    margin-top: 12px;
+    transform: translateX(-107px);
+}
+
+.delete{
+    position: relative;
+    margin-left: 15px;
+}
+.Config .delete button{
+    position: relative;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: red;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+.delete button:hover{
+    box-shadow: 5px 5px 5px gray;
+    transition: 0.2s ease;
+}
+
+.Config .delete i{
+    cursor: pointer;
+    color: red;
+    position: absolute;
+    font-size: 25px;
+    margin-top: 10px;
+    transform: translateX(-120px);
+}
+
+/* CONFIGURE PRODUCTS MODAL (ADD)*/
+.modalConfigAdd {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-add {
+    position: relative;
+    background-color: white;
+    margin: 9% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 650px; 
+    height: 500px;
+    position: relative;
+    box-shadow: 0px 5px 15px black;
+}
+
+.add-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.add-close:hover,
+.add-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CONFIGURE PRODUCTS MODAL (REMOVE)*/
+.modalConfigRemove {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-remove {
+    position: relative;
+    background-color: white;
+    margin: 9% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 650px; 
+    height: 150px;
+    position: relative;
+    box-shadow: 0px 5px 15px black;
+}
+
+.remove-close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.remove-close:hover,
+.remove-close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+    width: .7vw;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color:aqua;
+    border-radius: 100vw;
+    width: .9vw;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 100vw;
+    
+}

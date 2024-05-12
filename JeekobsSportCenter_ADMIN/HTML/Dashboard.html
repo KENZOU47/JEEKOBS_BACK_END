@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Dashboard.css">
-    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
+    <link rel="stylesheet" href="../CSS/style_Dashboard.css">
+    <link rel="icon" type="image/jpg" href="../Logo/Logo3.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -14,7 +14,7 @@
        <div class="box">
          <div class="profile">
             <p>Admin</p>
-            <img src="/JeekobsSportCenter_ADMIN/Users/Admin.jpg" alt="">
+            <img src="../Logo/Logo3.png" alt="">
          </div>
        </div>
 
@@ -27,22 +27,23 @@
          </li>
         </div>
         <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Products.html">Products</a>
+          <a href="../HTML/Products.html">Products</a>
           <i class='bx bx-package'></i>
         </li>
         <li>
-          <a href="/JeekobsSportCenter_ADMIN/HTML/Orders.html">Orders</a>
+          <a href="../HTML/Orders.html">Orders</a>
           <i class='bx bx-clipboard'></i>
        </li>
         <li>
-            <a href="/JeekobsSportCenter_ADMIN/HTML/Reviews.html">Reviews</a>
+            <a href="../HTML/Reviews.html">Reviews</a>
             <i class='bx bxs-message-alt-detail'></i>
          </li>
         <li>
-            <a href="/JeekobsSportCenter_ADMIN/HTML/Users.html">Users</a>
+            <a href="../HTML/Users.html">Users</a>
             <i class='bx bxs-user-badge'></i>
          </li>
-          <!--DORPDOWN-->
+
+          <!--DROPDOWN-->
          <ul class="settings-dropdown">
           <li>
             <a>Settings</a>
@@ -58,26 +59,7 @@
       </div>    
          </li>
         </ul>
-         <!--DORPDOWN-->
-        </ul>
-
-         <!--LOGOUT PAGE-->
-      <div class="Logout">
-        <button id="show-logout">Logout</button>
-         <i class='bx bxs-log-out' ></i>
-    </div>
-        <!--LOGOUT PAGE-->
-
-<!--Popout Logout-->
-
-<div class="Form">
-  <div class="close-btn">No</div>
-  <form action= "/JeekobsSportCenter_ADMIN/HTML/Admin-Login.html">
-    <p>Log out?</p>
-    <button type="submit">Yes</button>
-  </form>  
-</div>
-<!--Popout Logout-->
+         <!--DROPDOWN-->
 
        </div>   
      </div>
@@ -122,7 +104,7 @@
       </tr>
         <tr>
         <td>1</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Zenujin.jpg" alt="">Zenujin</td>
+        <td><img src="../Users/Zenujin.jpg" alt="">Zenujin</td>
         <td>Beruu@gmail.com</td>
         <td>69$</td>
         <td>Pending</td>
@@ -130,50 +112,42 @@
        </tr>
         <tr>
         <td>1</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Shampoo.jpg" alt="">Shampoo Girl</td>
+        <td><img src="../Users/Shampoo.jpg" alt="">Shampoo Girl</td>
         <td>Palmolive@gmail.com</td>
         <td>9$</td>
         <td>Completed</td>
         <td>20/04/2024</td>
        </tr>
-        <tr>
-        <td>1</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/kenneth Dominguez.jpg" alt="">Kenneth Dominguez</td>
-        <td>Dominguez@gmail.com</td>
-        <td>40$</td>
-        <td>Dispatched</td>
-        <td>10/04/2024</td>
-       </tr>
-        <tr>
-        <td>1</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Herwayne Cawili.jpg" alt="">Herwayne Cawili</td>
-        <td>Keerst@gmail.com</td>
-        <td>20$</td>
-        <td>Pending</td>
-        <td>15/04/2024</td>
-       </tr>
-        <tr>
-        <td>1</td>
-        <td><img src="/JeekobsSportCenter_ADMIN/Users/Little Girl.jpg" alt="">Cry Girl</td>
-        <td>Iyak@gmail.com</td>
-        <td>27$</td>
-        <td>Completed</td>
-        <td>29/04/2024</td>
-       </tr>     
       </table>
     </div>
   
   </div>
 
-   
-    <script>
+<!--Popout Logout-->
 
-  document.querySelector("#show-logout").addEventListener("click",function(){
-    document.querySelector(".Form").classList.add("active");
-});
-document.querySelector(".Form .close-btn").addEventListener("click",function(){
-    document.querySelector(".Form").classList.remove("active");
-});
+<div id="modal-bg" class="modal">  
+<form action= "../HTML/index.html" class="modal-content">
+<p>Log out?</p>
+<button type="submit">Yes</button>
+<span class="close-btn">No</span>
+</form>  
+</div>
+<!--Popout Logout-->
+
+   
+  <script>
+
+ var modal = document.getElementById("modal-bg");
+  var btn = document.getElementById("show-logout");
+    var span = document.getElementsByClassName("close-btn")[0];
+
+  btn.onclick = function() {
+  modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+  modal.style.display = "none";
+  }
 
 </script>
 

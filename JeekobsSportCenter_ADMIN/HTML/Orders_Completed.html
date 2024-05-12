@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="../CSS/style_Orders_Completed.css">
+    <link rel="icon" type="image/jpg" href="../Logo/Logo3.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidebar">
+       <div class="box">
+         <div class="profile">
+            <p>Admin</p>
+            <img src="../Logo/Logo3.png" alt="">
+         </div>
+       </div>
+
+     <div class="navbar">
+      <ul>
+        <li>
+          <a href="../HTML/Dashboard.html">Dashboard</a>
+          <i class='bx bxs-dashboard'></i>
+       </li>
+      <li>
+        <a href="../HTML/Products.html">Products</a>
+        <i class='bx bx-package'></i>
+      </li>
+      <div class="Orders">
+      <li>
+        <a>Orders</a>
+        <i class='bx bx-clipboard'></i>
+     </li>
+    </div>
+      <li>
+          <a href="../HTML/Reviews.html">Reviews</a>
+          <i class='bx bxs-message-alt-detail'></i>
+       </li>
+      <li>
+          <a href="../HTML/Users.html">Users</a>
+          <i class='bx bxs-user-badge'></i>
+       </li>
+        <!--DROPDOWN-->
+        <ul class="settings-dropdown">
+          <li>
+            <a>Settings</a>
+            <i class='bx bxs-cog' ></i>
+            <div class="arrow"><i class='bx bxs-down-arrow'></i></i></i></div>
+         </li>
+         <div class="product-management">
+      </div>
+         <li>
+        <div class="Logout">
+          <button id="show-logout">Logout</button>
+           <i class='bx bxs-log-out' ></i>
+      </div>    
+         </li>
+        </ul>
+         <!--DROPDOWN-->
+      </ul>        
+
+       </div>   
+     </div>
+
+    <div class="container">
+
+      <div class="tag"><p>Orders > Completed</p></div>
+
+      <div class="nav_bar">
+        
+          <a href="../HTML/Orders.html">All orders</a>
+           <a href="../HTML/Orders_Shipped.html">Shipped</a>
+            <a href="../HTML/Orders_Pending.html">Pending</a>
+
+              <div class="selected">
+            <a>Completed</a>
+         </div>
+      </div>
+
+     <div class="table-scroll">
+      <table id="T1" class="table">
+      <tr>
+        <thead>
+          <th>Id</th>
+          <th>Name</th>
+          <th>OrderName</th>
+          <th>Address</th>
+          <th>Date</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Action</th>
+      </thead>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><img src="../Users/Al-steven Tumingbang.jpg" alt="">Al-steven Tumingbang</td>
+        <td>SBall</td>
+        <td>Zamboanga City</td>
+        <td>02/04/2024</td>
+        <td>4</td>
+        <td>55$</td>
+        <td>Completed</td>
+        <td class="actions"><button id="remove"></i><i class='bx bx-trash-alt'></i></button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><img src="../Users/Anthony Marc Huesca.jpg" alt="">Anthony Marc Huesca</td>
+        <td>SBall</td>
+        <td>Zamboanga City</td>
+        <td>10/03/2024</td>
+        <td>5</td>
+        <td>31$</td>
+        <td>Completed</td>
+        <td class="actions"><button id="remove2"></i><i class='bx bx-trash-alt'></i></button></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><img src="../Users/Art Cadiz.jpg" alt="">Art Michael Cadiz</td>
+        <td>SBall</td>
+        <td>Zamboanga City</td>
+        <td>01//04/2024</td>
+        <td>3</td>
+        <td>56$</td>
+        <td>Completed</td>
+        <td class="actions"><button id="remove3"></i><i class='bx bx-trash-alt'></i></button></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><img src="../Users/Dean Reigh Billedo.jpg" alt="">Dean Reigh Billedo</td>
+        <td>SBall</td>
+        <td>Zamboanga City</td>
+        <td>04/02/2024</td>
+        <td>1</td>
+        <td>45$</td>
+        <td>Completed</td>
+        <td class="actions"><button id="remove4"></i><i class='bx bx-trash-alt'></i></button></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><img src="../Users/John Rizzler.jpg" alt="">John Harold Remigio</td>
+        <td>SBall</td>
+        <td>Zamboanga City</td>
+        <td>06/02/2024</td>
+        <td>2</td>
+        <td>11$</td>
+        <td>Completed</td>
+        <td class="actions"><button id="remove5" ></i><i class='bx bx-trash-alt'></i></button></td>
+      </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Delete User -->
+
+  <div id="modaldel" class="modaldel">
+
+    <form action="" class="modaldel-content">
+      <h1>Remove User</h1> <br>
+      <p>Are you sure you want to remove user?</p> <br><br>
+      <button type="submit" id="cancel" onclick="closebtn()">Cancel</button>
+      <button type="submit" id="submit" onclick="submitbtn()">Remove</button>
+    </form>
+
+  </div>
+
+  <!--Popout Logout-->
+
+<div id="modal-bg" class="modal">  
+  <form action= "index.html" class="modal-content">
+  <p>Log out?</p>
+  <button type="submit">Yes</button>
+  <span class="close-btn">No</span>
+  </form>  
+  </div>
+  <!--Popout Logout-->
+  
+
+
+  <script>
+
+
+    // log out //
+    var modal = document.getElementById("modal-bg");
+      var btn = document.getElementById("show-logout");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+  btn.onclick = function() {
+  modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+  modal.style.display = "none";
+  }
+  
+    // delete user //
+    var modaldlt = document.getElementById("modaldel");
+      var btndlt = document.getElementById("remove");
+       var btndlt2 = document.getElementById("remove2");
+        var btndlt3 = document.getElementById("remove3");
+         var btndlt4 = document.getElementById("remove4");
+          var btndlt5 = document.getElementById("remove5");
+            var spandlt = document.getElementsByClassName("cancel")[0];
+
+  btndlt.onclick = function() {
+  modaldlt.style.display = "block";
+  }
+  btndlt2.onclick = function() {
+  modaldlt.style.display = "block";
+  }
+  btndlt3.onclick = function() {
+  modaldlt.style.display = "block";
+  }
+  btndlt4.onclick = function() {
+  modaldlt.style.display = "block";
+  }
+  btndlt5.onclick = function() {
+  modaldlt.style.display = "block";
+  }
+
+  spandlt.onclick = function() {
+  modaldlt.style.display = "none";
+  }
+
+  </script>
+</body>
+</html>

@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeekobs Admin Login</title>
-    <link rel="icon" type="image/jpg" href="/JeekobsSportCenter_ADMIN/Logo/LOGO.png">
-    <link rel="stylesheet" href="/JeekobsSportCenter_ADMIN/CSS/style_Login.css">
+    <link rel="icon" type="image/jpg" href="JeekobsSportCenter_ADMIN/Logo/Logo3.png">
+    <link rel="stylesheet" href="../CSS/style_Login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
-    <div class="wrapper">
-    <form action="/JeekobsSportCenter_ADMIN/HTML/Dashboard.html">
+    <div class="container" id="Login">
+      <form method="post" action="register.php">
         <p>Login</p>
         <div class="input-box">
-            <input type="text" placeholder="Enter Username" required>
+            <input type="text" name="Username" placeholder="Enter Username" required>
             <i class='bx bxs-user' ></i>
         </div>
         <div class="input-box">
-            <input type="password" placeholder="Enter Password" required>
+            <input type="password" name="Password" placeholder="Enter Password" required>
             <i class='bx bxs-lock-alt' ></i>
         </div>          
-       <button type="submit" class="btn">LOGIN</button>
+       <button type="submit" class="btn" value="login" name="Login">LOGIN</button>
         
     </form>
    </div>

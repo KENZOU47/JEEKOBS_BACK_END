@@ -63,7 +63,7 @@
     padding-bottom: 20px;
     padding-left: 80px;
     position: relative;
-    transition:  0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar i{
@@ -75,23 +75,23 @@
 }
 
 .navbar a:hover{
-    transition:  0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     background-color: white;
     box-shadow: 10px 10px 20px;
     border-radius: 20px;
 }
 
 
-.Users a{
+.Reviews a{
     background-color: white;
     box-shadow: 10px 10px 20px aqua;
 }
 
-.navbar .Users a{
+.navbar .Reviews a{
     border-radius: 20px;
     color: aqua;
 }
-.navbar .Users i{
+.navbar .Reviews i{
     color: aqua;
 }
 
@@ -166,93 +166,97 @@ ul.settings-dropdown a:hover{
 
 
 /*Pop out window*/
-.Form{
-    width: 425px;
-    height: 277px;
-    box-shadow:  10px 10px 20px;
-    border-radius: 30px;
-    background-color:white;
-    position: absolute;
-    left: 55%;
-    top: -150%;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.25);  
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
-                z-index: 1000;
-}
-.Form.active {
-    top: 50%;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);  
-    transition: top 0ms ease-in-out 0ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
-}
-.Form p{
-    text-align: center;
-    font-size: 50px;
-    margin-top: 50px;
-    font-weight: bold;
-}
-.Form button{
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+   backdrop-filter: blur(10px);
+   transition: top 0.3s ease-in-out;
+  }
+  
+  .modal-content {
+    position: relative;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    color: black;
-    margin-top: 50px;
-    margin-left: 50px;
-    font-size: 50px;
+    margin: 16% auto;
     padding: 20px;
+    border-radius: 10px;
+    width: 450px; 
+    height: 250px;
+    position: relative;
+    box-shadow: 0px 5px 15px gray;
+  }
+
+  .modal.active{
+    transition: 0.3s ease-in-out;
+  }
+
+  .modal-content p{
+    margin-left:24%;
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    align-items: center;
+  }
+
+.modal-content button{
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 15%;
+    margin-top: 18%;
+    padding: 10px 18px;
+    border-radius: 10px;
     outline: none;
     border: none;
-    border-radius: 20px;
-    transition: 0.3s ease-in-out;
-}
-.Form .close-btn{
-    color: black;
-    font-size:50px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+  }
+
+.modal-content .close-btn{
     position: absolute;
-    left: 270px;
-    top: 160px;
-    border-radius: 20px;
-    padding: 20px;
-    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 54%;
+    margin-top: 18%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
+    transition: 0.2s ease-in-out;
 }
 
-.Form .close-btn:hover{
-    transition: 0.4s ease-in-out;
-    box-shadow: 10px 10px 20px;
-    color: red;
+.modal-content button:hover,
+.close-btn:hover{
+    box-shadow: 5px 5px 5px grey;
+    transition: 0.2s ease-in-out;
 }
-.Form a{
-    font-size: 50px;
-    text-decoration: none;
-    color: black;
-    margin-left: 80px;
-}
-.Form button:hover{
-    transition: 0.4s ease-in-out;
-    color: lime;
-}
+  
 
 /*Pop out window*/
 
 
-.container{
-    display: flex;
-    flex-flow: column;
+.container-bg{
     background-color: white;
     width: 1650px;
     height: 940px;
-    padding: 20px;
     margin: auto;
+    display: flex;
     border-radius: 20px;
+    padding: 10px;
 }
 
-.container .tag{
-    margin-top: -9px;
-    position: relative;
-     margin-left: 6px;
+.container-bg .tag{
+    margin-top: 1px;
+    position: absolute;
+     margin-left: 10px;
      font-size: 32px;    
 }
 
@@ -278,7 +282,6 @@ ul.settings-dropdown a:hover{
 .table {
     font-size: 25px;
     border-collapse: collapse;
-    padding: 20px;
 }
 
 .table tr{
@@ -291,7 +294,6 @@ ul.settings-dropdown a:hover{
     transition: 0.3s ease;
 }
 .table th{   
-    padding-right: 45px;
     overflow-y: scroll;
     background-color: aqua;
     height: 80px;
@@ -301,15 +303,16 @@ ul.settings-dropdown a:hover{
 }
 
 .table td{
-    padding-left: 10px;
+    padding: 10px;
+    padding-left: 20px;
     align-items: center;
     justify-content: center;
     height: 80px;
 }
 
 .table tr .actions i{
-    margin-left: 20px;
     color: gray;
+    margin-left: 20px; 
     padding: 5px;
     transition: 0.1s ease-in-out;
 }
@@ -332,10 +335,16 @@ ul.settings-dropdown a:hover{
 }
 
 tr img{
-    margin-right: 25px;
-    height: 60px;
-    width: 60px;
-    border-radius: 60px;
+    display: inline-flex;
+    margin-right: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+}
+
+.table tr td#review-name{
+    display: flex;
+    font-size: 20px;
 }
 
 ::-webkit-scrollbar{
@@ -352,4 +361,5 @@ tr img{
     border-radius: 100vw;
     margin-block: 2em;
 }
+    
 
